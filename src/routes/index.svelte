@@ -8,7 +8,7 @@
     <div class="subtitle">Sunday 5th March 2023</div>
   </h1>
   <div class="container">
-    <img src="nick.jpg" alt="Nick Care conducting junior brass" width="300px" />
+    <img src="nick.jpg" alt="Nick Care conducting junior brass" width="300px" height="365px"/>
     <div>
       <h2>About Nick</h2>
       <p>
