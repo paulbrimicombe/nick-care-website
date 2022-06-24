@@ -1,6 +1,5 @@
 <script>
-  import { fade } from "svelte/transition";
-
+  import PageTransition from "../lib/PageTransition.svelte";
   import Gallery from '../lib/Gallery.svelte'
 
   const images = [
@@ -47,8 +46,7 @@
   ];
 </script>
 
-<div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
+<PageTransition>
   <h1>Gallery</h1>
-
   <Gallery images={images}></Gallery>
-</div>
+</PageTransition>

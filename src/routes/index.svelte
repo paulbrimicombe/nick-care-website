@@ -1,23 +1,28 @@
 <script type="module">
-  import { fade } from "svelte/transition";
+  import PageTransition from "../lib/PageTransition.svelte";
 </script>
 
-<div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
+<PageTransition>
   <h1>
     Nick Care celebration concert
     <div class="subtitle">Sunday 5th March 2023</div>
   </h1>
   <div class="container">
-    <img src="nick.jpg" alt="Nick Care conducting junior brass" width="300px" height="365px"/>
+    <img
+      src="nick.jpg"
+      alt="Nick Care conducting junior brass"
+      width="300px"
+      height="365px"
+    />
     <div>
       <h2>About Nick</h2>
       <p>
         Nick Care was a much-loved trumpet player, educationalist, band
         director, teacher and friend. There will be a concert to celebrate his
-        life on <b>Sunday 5th March 2023</b> in Buckinghamshire or Bedfordshire
-        (location TBC). We would like as many people whose lives were touched by
-        Nick to come together and celebrate Nick and all the amazing music he
-        brought to our lives so please save the date now!
+        life on <b>Sunday 5th March 2023</b> in Buckinghamshire or Bedfordshire (location
+        TBC). We would like as many people whose lives were touched by Nick to come
+        together and celebrate Nick and all the amazing music he brought to our lives
+        so please save the date now!
       </p>
       <p>
         Please see the <a href="/about">about Nick</a> page for more information
@@ -65,35 +70,35 @@
       <li>Help on the concert day</li>
     </ul>
   </section>
+</PageTransition>
 
-  <style>
-    .container {
-      display: flex;
-      gap: 1em;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 1em;
-    }
+<style>
+  .container {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1em;
+  }
 
-    .container div {
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
+  .container div {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 
-    .subtitle {
-      font-size: 0.8em;
-    }
+  .subtitle {
+    font-size: 0.8em;
+  }
 
-    h1 {
-      padding-bottom: 1rem;
-    }
+  h1 {
+    padding-bottom: 1rem;
+  }
 
-    section {
-      padding-bottom: 1em;
-    }
-  </style>
-</div>
+  section {
+    padding-bottom: 1em;
+  }
+</style>

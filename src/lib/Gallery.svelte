@@ -1,5 +1,4 @@
 <script>
-  // Param....
   /** @type {{ src: string, alt: string }[]} */
   export let images = [];
 

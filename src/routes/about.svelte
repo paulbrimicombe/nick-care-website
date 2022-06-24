@@ -1,9 +1,15 @@
 <script type="module">
-  import { fade } from 'svelte/transition'
+  import PageTransition from "../lib/PageTransition.svelte";
 </script>
 
-<div in:fade={{ delay: 300, duration: 200 }} out:fade={{ duration: 200 }}>
+<PageTransition>
   <h1>About</h1>
 
   <p>Some information about Nick perhaps?</p>
-</div>
+</PageTransition>
+
+<style>
+  p {
+    flex: 1;
+  }
+</style>
