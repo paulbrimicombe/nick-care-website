@@ -12,10 +12,10 @@
         <a sveltekit:prefetch href="/about">About Nick</a>
       </li>
       <li class:active={$page.url.pathname === "/attend/"}>
-        <a sveltekit:prefetch href="/attend">I'd like to watch!</a>
+        <a sveltekit:prefetch href="/attend">Audience</a>
       </li>
       <li class:active={$page.url.pathname === "/play/"}>
-        <a sveltekit:prefetch href="/play">I'd like to play!</a>
+        <a sveltekit:prefetch href="/play">Performing</a>
       </li>
     </ul>
   </nav>
@@ -23,32 +23,27 @@
 
 <style>
   header {
-    display: flex;
+    position: sticky;
+    z-index: 1;
     max-width: 1024px;
-    width: 100%;
     margin: 0 auto;
-    justify-content: space-between;
+    height: 3rem;
   }
 
   nav {
-    display: flex;
-		flex: 1;
-    justify-content: center;
-    --background: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    padding-bottom: 0.2rem;
   }
 
   ul {
-    position: relative;
     padding: 0;
     margin: 0;
-    height: 3em;
+    height: 100%;
     display: flex;
-		flex: 1;
+    flex: 1;
     justify-content: start;
     align-items: center;
     list-style: none;
-    background: var(--background);
-    background-size: contain;
   }
 
   li {
@@ -63,13 +58,14 @@
     height: 0;
     position: absolute;
     bottom: var(--size);
-		left: calc(5%);
-		transition: border-color 0.2s linear;
+    left: calc(5%);
+    transition: border-color 0.2s linear;
     border-bottom: var(--size) solid transparent;
-		pointer-events: none;
+    pointer-events: none;
   }
 
-  li.active::before, li:hover::before {
+  li.active::before,
+  li:hover::before {
     border-bottom: var(--size) solid var(--accent-color);
   }
 

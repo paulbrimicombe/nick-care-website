@@ -46,14 +46,25 @@
   }
 
   .spinner {
-    width: 100%;
     height: 100%;
+    width: 100%;
     position: absolute;
     display: flex;
     align-items: center;
     justify-items: center;
-    background-color: #22222222;
     z-index: 1;
+  }
+
+  .spinner::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: #11111188;
+    box-shadow: #11111188 0px 0px 5px 5px;
   }
 
   .hidden {
@@ -79,7 +90,7 @@
     animation: 1.4s ease-in-out infinite both circle-animation;
     display: block;
     fill: transparent;
-    stroke: #2f3d4c;
+    stroke: var(--accent-color);
     stroke-linecap: round;
     stroke-dasharray: 283;
     stroke-dashoffset: 280;

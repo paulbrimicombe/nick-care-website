@@ -3,8 +3,8 @@
 
   let state = "";
 
-  const inDelay = 300;
-  const duration = 200;
+  const inDelay = 400;
+  const duration = 300;
 
   const onIntroStart = () => {
     state = "INTRO_START";
@@ -12,14 +12,14 @@
       state = "VISIBLE";
       setTimeout(() => {
         state = "FADING_IN";
-      });
+      }, 10);
     }, inDelay);
   };
 </script>
 
 <div
   in:fade={{ duration: 0 }}
-  out:fade={{ duration }}
+  out:fade={{ duration: duration }}
   on:introstart={onIntroStart}
   class={state === "INTRO_START"
     ? "intro-start"
@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    transition: opacity 0.2s;
+    transition: opacity 0.3s;
   }
 
   .intro-start {

@@ -1,23 +1,22 @@
 <script>
-	import '../reset.css';
-	import '../app.css';
-	import Header from '../lib/Header.svelte'
+  import "../reset.css";
+  import "../app.css";
+  import Header from "../lib/Header.svelte";
 </script>
 
 <Header />
 
 <main>
-	<slot />
+  <slot />
 </main>
 
 <style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-	}
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: calc(100vw - calc(100vw - 100%));
+    height: calc(100vh - calc(100vh - 100%) - 3rem);
+  }
 </style>

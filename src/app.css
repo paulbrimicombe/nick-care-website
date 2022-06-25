@@ -2,12 +2,14 @@
   font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --pure-white: #ffffff;
-  --primary-color: #b9c6d2;
-  --secondary-color: #d0dde9;
-  --tertiary-color: #edf0f8;
-  --accent-color: #d31e3a;
+  --primary-color: #005770;
+  --secondary-color: #705d00;
+  --tertiary-color: #00444E;
+  --accent-color: #70004a;
   --heading-color: rgba(0, 0, 0, 0.7);
-  --text-color: #444444;
+  --secondary-color-bright: #e1bb00;
+  --text-color: #eeeeee;
+  --text-color: #222222;
   --background-without-opacity: rgba(243, 210, 210, 0.7);
   --column-width: 42rem;
   --column-margin-top: 4rem;
@@ -15,18 +17,21 @@
 
 body {
   margin: 0;
-  background-color: var(--primary-color);
-  background: linear-gradient(180deg,
-      var(--primary-color) 0%,
-      var(--secondary-color) 10%,
-      var(--tertiary-color) 40%);
+  background-color: var(--pure-white);
+  color: var(--text-color);
 }
 
 body>div {
   width: calc(100vw - calc(100vw - 100%));
   height: calc(100vh - calc(100vh - 100%));
-  display: flex;
-  flex-direction: column;
   overflow-y: auto;
   font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--accent-color);
 }
