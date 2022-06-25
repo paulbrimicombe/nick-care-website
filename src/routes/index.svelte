@@ -113,7 +113,7 @@
   .hero {
     margin: 0;
     position: relative;
-    height: calc(100vh - 3rem);
+    height: calc(90vh - 3rem);
     display: flex;
     flex-direction: column;
   }
@@ -121,7 +121,7 @@
   .hero::before {
     content: "";
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     position: absolute;
     z-index: -1;
     margin-top: -3rem;

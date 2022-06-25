@@ -32,7 +32,7 @@
 
   nav {
     height: 100%;
-    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
   }
 
   ul {
