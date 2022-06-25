@@ -129,6 +129,7 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: blur(0.5px);
   }
 
   .hero > .container {
