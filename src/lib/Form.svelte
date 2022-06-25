@@ -60,11 +60,11 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    border-radius: 10px;
+    border-radius: 2px;
     width: calc(100% - 20px);
     height: calc(100% - 20px);
-    background-color: #11111188;
-    box-shadow: #11111188 0px 0px 5px 5px;
+    background-color: #11111144;
+    box-shadow: #11111144 0px 0px 2px 2px;
   }
 
   .hidden {

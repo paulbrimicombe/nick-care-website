@@ -12,5 +12,6 @@
     max-width: 1024px;
     padding-left: 1em;
     padding-right: 1em;
+    padding-bottom: 1em;
   }
 </style>
