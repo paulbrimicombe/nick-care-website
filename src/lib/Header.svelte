@@ -24,15 +24,22 @@
 <style>
   header {
     position: sticky;
+    top: 0;
     z-index: 1;
-    max-width: 1024px;
-    margin: 0 auto;
-    height: 3rem;
+    background: #ffffffef;
+    height: var(--header-height);
+    padding-left: calc(100vw - 1024px);
+    padding-right: calc(100vw - 1024px);
+    background: linear-gradient(
+      180deg,
+      #ffffffee 0%,
+      #ffffffcc 85%,
+      #ffffff00 100%
+    );
   }
 
   nav {
-    height: 100%;
-    margin-bottom: 0.2rem;
+    height: calc(var(--header-height) - 0.5em);
   }
 
   ul {

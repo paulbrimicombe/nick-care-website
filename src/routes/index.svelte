@@ -44,10 +44,10 @@
       <h2>About the concert</h2>
       <div class="image-and-text">
         <img
-          src="/django.jpg"
+          src="/btl-recording.jpg"
           width="352px"
-          height="264px"
-          alt="Aylesbury Music Centre Dance Band with Django Bates"
+          height="238px"
+          alt="Nick Care conducting AMC Dance Band with Selena Jones (Beyond the Limit recording session, 1999)"
           loading="lazy"
         />
         <div class="text">
@@ -79,10 +79,10 @@
       </div>
       <div class="image-and-text">
         <img
-          src="/tjb-2003b.jpg"
+          src="/tjb-rfh.jpg"
           width="352px"
-          height="341px"
-          alt="Turnfurlong Jazz Band (2003)"
+          height="237px"
+          alt="Turnfurlong Jazz Band at the Royal Festival Hall (c. 2003)"
           loading="lazy"
         />
         <div class="text">
@@ -113,7 +113,7 @@
   .hero {
     margin: 0;
     position: relative;
-    height: calc(90vh - 3rem);
+    height: calc(90vh - var(--header-height));
     display: flex;
     flex-direction: column;
   }
@@ -124,7 +124,7 @@
     height: 90vh;
     position: absolute;
     z-index: -1;
-    margin-top: -3rem;
+    margin-top: calc(-1 * var(--header-height));
     background-image: url(/amc-db-doin-time.jpg);
     background-position: center top;
     background-repeat: no-repeat;
@@ -148,13 +148,14 @@
   }
 
   h1 {
+    --padding: 0.5em;
     color: var(--heading-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-transform: capitalize;
     text-align: center;
-    padding: 0.5em;
+    padding: var(--padding);
     margin: 0.5em;
     align-items: center;
     border-radius: 0.5em;
@@ -167,6 +168,8 @@
       var(--accent-color),
       var(--secondary-color-bright)
     );
+    position: sticky;
+    top: calc(var(--header-height) + var(--padding));
   }
 
   section {
