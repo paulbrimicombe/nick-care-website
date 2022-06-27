@@ -1,5 +1,5 @@
 <script>
-  /** @type {{ src: string, alt: string }[]} */
+  /** @type {{ src: string, alt: string, width: number, height: number }[]} */
   export let images = [];
 
   /**
@@ -7,7 +7,7 @@
    */
   let dialog;
 
-  /** @type {{ src: string, alt: string } | null} */
+  /** @type {{ src: string, alt: string, width: number, height: number } | null} */
   let selectedImage = null;
 
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
@@ -60,7 +60,7 @@
   };
 </script>
 
-<svelte:window on:keydown={handleKeydown}/>
+<svelte:window on:keydown={handleKeydown} />
 
 <dialog class="modal" bind:this={dialog}>
   <header>
@@ -89,7 +89,13 @@
       </ul>
     </form>
   </header>
-  <img id="modal-image" alt={selectedImage?.alt} src={selectedImage?.src} />
+  <img
+    id="modal-image"
+    alt={selectedImage?.alt}
+    src={selectedImage?.src}
+    width={selectedImage?.width + "px"}
+    height={selectedImage?.height + "px"}
+  />
   <footer>
     <div>
       {selectedImage?.alt}
@@ -101,7 +107,13 @@
   <div class="gallery">
     {#each images as image}
       <button on:click={onImageClick} data-index={images.indexOf(image)}>
-        <img src={image.src} alt={image.alt} loading="lazy" />
+        <img
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+          width={image?.width + "px"}
+          height={image?.height + "px"}
+        />
       </button>
     {/each}
   </div>
@@ -132,6 +144,7 @@
     pointer-events: none;
     max-height: 15em;
     object-fit: contain;
+    width: auto;
   }
 
   button {
