@@ -33,8 +33,8 @@
             he brought to our lives so please save the date now!
           </p>
           <p>
-            Please see the <a href="/about">about Nick</a> page for more information
-            about Nick and the various groups he conducted and played with.
+            Please see the <a href="/gallery">gallery</a> page for some pictures
+            of Nick and the various groups he conducted and played with.
           </p>
         </div>
       </div>
