@@ -120,7 +120,7 @@
 
   .hero::before {
     content: "";
-    width: 100vw;
+    width: calc(100vw - (100vw - 100%));
     height: 90vh;
     position: absolute;
     z-index: -1;
@@ -188,7 +188,7 @@
     content: "";
     border-bottom: var(--accent-color) solid 3px;
     position: absolute;
-    height: calc(1em + 0.5em);
+    height: 1.5em;
     left: 0;
     width: 100%;
   }

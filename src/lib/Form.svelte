@@ -61,8 +61,8 @@
     top: 10px;
     left: 10px;
     border-radius: 2px;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
     background-color: #11111144;
     box-shadow: #11111144 0px 0px 2px 2px;
   }

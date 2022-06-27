@@ -17,29 +17,85 @@
 
       if (typeof index !== "undefined") {
         selectedImage = images[parseInt(index, 10)];
+        dialog.showModal();
       }
+    }
+  };
+
+  const nextImage = (/** @type {HTMLElementEventMap['click']} */ event) => {
+    event?.preventDefault();
+    const currentIndex = selectedImage ? images.indexOf(selectedImage) : -1;
+    const newImage = images[currentIndex + 1];
+
+    if (newImage) {
+      selectedImage = newImage;
+    }
+  };
+
+  const previousImage = (/** @type {HTMLElementEventMap['click']} */ event) => {
+    event?.preventDefault();
+
+    const currentIndex = selectedImage ? images.indexOf(selectedImage) : -1;
+    const newImage = images[currentIndex - 1];
+
+    if (newImage) {
+      selectedImage = newImage;
+    }
+  };
+
+  const onModalClose = (/** @type {HTMLElementEventMap['submit']} */ event) => {
+    event?.preventDefault();
+    selectedImage = null;
+    dialog.close();
+  };
+
+  const handleKeydown = (
+    /** @type {HTMLElementEventMap['keydown']} */ event
+  ) => {
+    console.log(event);
+    if (selectedImage && event.key === "ArrowLeft") {
+      previousImage();
+    } else if (selectedImage && event.key === "ArrowRight") {
+      nextImage();
     }
   };
 </script>
 
-<dialog
-  class="modal"
-  bind:this={dialog}
-  on:close={() => {
-    selectedImage = null;
-    dialog.close();
-  }}
-  open={!!selectedImage}
->
+<svelte:window on:keydown={handleKeydown}/>
+
+<dialog class="modal" bind:this={dialog}>
   <header>
-    <div>
-      {selectedImage?.alt}
-    </div>
-    <form method="dialog">
-      <button value="default">Close</button>
+    <form method="dialog" on:submit={onModalClose}>
+      <ul>
+        <li>
+          <button
+            class="gallery-nav previous"
+            on:click={previousImage}
+            disabled={!selectedImage || images.indexOf(selectedImage) === 0}
+            >Previous</button
+          >
+        </li>
+        <li>
+          <button
+            class="gallery-nav next"
+            on:click={nextImage}
+            disabled={!selectedImage ||
+              images.indexOf(selectedImage) === images.length - 1}>Next</button
+          >
+        </li>
+        <div class="spacer" />
+        <li>
+          <button value="default">Close</button>
+        </li>
+      </ul>
     </form>
   </header>
   <img id="modal-image" alt={selectedImage?.alt} src={selectedImage?.src} />
+  <footer>
+    <div>
+      {selectedImage?.alt}
+    </div>
+  </footer>
 </dialog>
 
 <div>
@@ -53,6 +109,10 @@
 </div>
 
 <style>
+  button {
+    border: none;
+  }
+
   .gallery {
     display: flex;
     flex-direction: row;
@@ -71,8 +131,8 @@
 
   button img {
     pointer-events: none;
-    max-height: 80vh;
-    max-width: 100%;
+    max-height: 15em;
+    object-fit: contain;
   }
 
   button {
@@ -85,48 +145,73 @@
     max-width: 90vw;
     padding: 0;
     border: none;
-    box-shadow: 0 0 2em  rgba(0, 0, 0, 1);
+    box-shadow: 0 0 2em rgba(0, 0, 0, 1);
+    position: relative;
   }
 
   .modal img {
     max-height: inherit;
     max-width: inherit;
     object-fit: contain;
-    padding-top: 3em;
   }
 
   .modal header {
     position: absolute;
     color: var(--heading-color);
+    font-size: 0.8em;
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
   }
 
-  .modal header div {
-    line-height: 2em;
+  .modal footer {
+    position: absolute;
+    bottom: 0;
     padding: 0.5em;
-    color: var(--heading-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    background: #000000aa;
+    width: 100%;
+    color: #ddd;
   }
 
   .modal form {
-    padding: 0.5em;
+    height: 3em;
     position: relative;
+    background-color: #ffffffaa;
+    width: 100%;
+  }
+
+  .modal form ul {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+  }
+
+  .modal form ul li {
+    position: relative;
+    height: 100%;
   }
 
   dialog[open] {
     animation: show 0.6s ease normal;
-    top: 5vh;
+    margin-top: 5vh;
+    z-index: 100;
+    border-radius: 0.1em;
   }
 
-  dialog[open]::backdrop {
+  dialog::backdrop {
     animation: show 0.6s ease normal;
     background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 1000;
+    width: calc(100vw - (100vw - 100%));
+    height: 100vh;
   }
 
   @keyframes show {
@@ -138,12 +223,16 @@
     }
   }
 
+  .spacer {
+    flex: 1;
+  }
+
   .modal button {
     color: var(--heading-color);
-    background-color: inherit;
+    background-color: initial;
+    height: 100%;
     font-weight: 700;
     font-size: 0.8rem;
-    height: 2em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
@@ -151,6 +240,14 @@
     background-clip: 0.1rem;
     border: none;
     cursor: pointer;
+  }
+
+  .modal button[disabled] {
+    color: #666;
+  }
+
+  .modal button[disabled]:hover {
+    color: #666;
   }
 
   .modal button::before {
@@ -168,6 +265,10 @@
 
   .modal button:hover::before {
     border-bottom: var(--size) solid var(--accent-color);
+  }
+
+  .modal button[disabled]:hover::before {
+    border-bottom: transparent;
   }
 
   .modal button:hover {

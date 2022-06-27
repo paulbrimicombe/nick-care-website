@@ -1,52 +1,46 @@
-<script>
+<script type="module">
   import PageTransition from "../lib/PageTransition.svelte";
-  import Gallery from '../lib/Gallery.svelte'
-
-  const images = [
-    {
-      src: "nick.jpg",
-      alt: "Nick Care",
-    },
-    {
-      src: "https://via.placeholder.com/180x200/100",
-      alt: "180x200",
-    },
-    {
-      src: "https://via.placeholder.com/140x250/100",
-      alt: "140x250",
-    },
-    {
-      src: "https://via.placeholder.com/1250x300/100",
-      alt: "250x300",
-    },
-    {
-      src: "https://via.placeholder.com/280x200/100",
-      alt: "280x200",
-    },
-    {
-      src: "https://via.placeholder.com/220x180/100",
-      alt: "220x180",
-    },
-    {
-      src: "https://via.placeholder.com/180x150/100",
-      alt: "180x150",
-    },
-    {
-      src: "https://via.placeholder.com/2210x2210/100",
-      alt: "1210x1210",
-    },
-    {
-      src: "https://via.placeholder.com/200x200/100",
-      alt: "200x200",
-    },
-    {
-      src: "https://via.placeholder.com/220x200/100",
-      alt: "220x200",
-    },
-  ];
+  import Container from "../lib/Container.svelte";
+  import Gallery from "../lib/Gallery.svelte";
 </script>
 
 <PageTransition>
-  <h1>Gallery</h1>
-  <Gallery images={images}></Gallery>
+  <Container fullWidth={true}>
+    <Gallery
+      images={[
+        {
+          src: "/gallery/nick.jpg",
+          alt: "Nick Care conducting",
+        },
+        {
+          src: "/gallery/amc-db-doin-time.jpg",
+          alt: "Doin' Time recording session",
+        },
+        {
+          src: "/gallery/btl-recording.jpg",
+          alt: "Beyond the Limit recording session with Salena Jones",
+        },
+        {
+          src: "/gallery/tjb-rfh.jpg",
+          alt: "Turnfurlong Jazz Band at the Royal Festival Hall",
+        },
+        {
+          src: "/gallery/bernwode-festival-orch-2003.jpg",
+          alt: "Bernwode Festival Orchestra 2003",
+        },
+        {
+          src: "/gallery/jwb-winslow.jpg",
+          alt: "Aylesbury Music Centre Junior Wind Band (Winslow)",
+        },
+        {
+          src: "/gallery/brass-tacks.jpg",
+          alt: "Brass Tacks",
+        },
+        {
+          src: "/gallery/benslow-aug-10.jpg",
+          alt: "Benslow",
+        },
+      ]}
+    />
+  </Container>
 </PageTransition>
