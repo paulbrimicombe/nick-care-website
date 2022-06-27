@@ -1,5 +1,5 @@
 <script>
-  /** @type {{ src: string, alt: string, width: number, height: number }[]} */
+  /** @type {{ src: string, srcPreview: string, alt: string, width: number, height: number }[]} */
   export let images = [];
 
   /**
@@ -7,7 +7,7 @@
    */
   let dialog;
 
-  /** @type {{ src: string, alt: string, width: number, height: number } | null} */
+  /** @type {{ src: string, srcPreview: string, alt: string, width: number, height: number } | null} */
   let selectedImage = null;
 
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
@@ -108,7 +108,7 @@
     {#each images as image}
       <button on:click={onImageClick} data-index={images.indexOf(image)}>
         <img
-          src={image.src}
+          src={image.srcPreview}
           alt={image.alt}
           loading="lazy"
           width={image?.width + "px"}
@@ -145,6 +145,7 @@
     max-height: 15em;
     object-fit: contain;
     width: auto;
+    height: auto;
   }
 
   button {
@@ -165,6 +166,8 @@
     max-height: inherit;
     max-width: inherit;
     object-fit: contain;
+    width: auto;
+    height: auto;
   }
 
   .modal header {
