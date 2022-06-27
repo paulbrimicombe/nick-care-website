@@ -1,17 +1,19 @@
 <script type="module">
-  export let fullWidth = false;
+  /** @type string | null */
+  export let variant = null;
 </script>
 
-<div class="container" class:narrow={!fullWidth}>
+<div class="container" class:full-width={variant === 'fullWidth'}>
   <slot />
 </div>
 
 <style>
-  .narrow {
-    max-width: 1024px;
+  .container.full-width {
+    max-width: unset;
   }
 
   .container {
+    max-width: 1024px;
     display: flex;
     flex-direction: column;
     flex: 1;

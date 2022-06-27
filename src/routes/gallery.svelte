@@ -5,7 +5,7 @@
 </script>
 
 <PageTransition>
-  <Container fullWidth={true}>
+  <Container variant="fullWidth">
     <Gallery
       images={[
         {

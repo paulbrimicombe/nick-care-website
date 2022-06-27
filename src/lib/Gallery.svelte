@@ -52,7 +52,6 @@
   const handleKeydown = (
     /** @type {HTMLElementEventMap['keydown']} */ event
   ) => {
-    console.log(event);
     if (selectedImage && event.key === "ArrowLeft") {
       previousImage();
     } else if (selectedImage && event.key === "ArrowRight") {
