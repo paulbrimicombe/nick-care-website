@@ -186,7 +186,13 @@
 
   h2::after {
     content: "";
-    border-bottom: var(--accent-color) solid 3px;
+    border-bottom: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      to top right,
+      var(--accent-color),
+      var(--secondary-color-bright)
+    );
     position: absolute;
     height: 1.5em;
     left: 0;

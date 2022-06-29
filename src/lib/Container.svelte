@@ -1,10 +1,13 @@
 <script type="module">
+import Footer from "./Footer.svelte";
+
   /** @type string | null */
   export let variant = null;
 </script>
 
 <div class="container" class:full-width={variant === 'fullWidth'}>
   <slot />
+  <Footer/>
 </div>
 
 <style>
@@ -21,6 +24,5 @@
     width: 100%;
     padding-left: 1em;
     padding-right: 1em;
-    padding-bottom: 1em;
   }
 </style>
