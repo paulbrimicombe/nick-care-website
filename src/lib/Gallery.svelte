@@ -11,7 +11,7 @@
   let selectedImage = null;
 
   /** @type string | undefined */
-  let selectedImageAltText;
+  let selectedImageCaption;
 
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
     /** @type {HTMLButtonElement | null}*/
@@ -26,7 +26,7 @@
   };
 
   const onImageLoad = (/** @type {HTMLElementEventMap['load']} */ event) => {
-    selectedImageAltText = selectedImage?.alt;
+    selectedImageCaption = selectedImage?.alt;
   }
 
   const nextImage = (/** @type {HTMLElementEventMap['click']} */ event) => {
@@ -53,6 +53,7 @@
   const onModalClose = (/** @type {HTMLElementEventMap['submit'] | HTMLElementEventMap['click']} */ event) => {
     event?.preventDefault();
     selectedImage = null;
+    selectedImageCaption = '';
     dialog.close();
   };
 
@@ -104,11 +105,12 @@
       src={selectedImage?.src || ''}
       width={selectedImage?.width + "px"}
       height={selectedImage?.height + "px"}
+      loading="lazy"
     />
   </div>
   <footer>
     <div>
-      {selectedImageAltText || ''}
+      {selectedImageCaption || ''}
     </div>
   </footer>
 </dialog>
