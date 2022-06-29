@@ -1,17 +1,22 @@
 <script>
-  /** @type {{ src: string, srcPreview: string, alt: string, width: number, height: number }[]} */
+  /** @type {{ src: string, alt: string, width: number, height: number }[]} */
   export let images = [];
+
+  export let imageRoot = "";
 
   /**
    * @type {HTMLDialogElement}
    */
   let dialog;
 
-  /** @type {{ src: string, srcPreview: string, alt: string, width: number, height: number } | null} */
+  /** @type {{ src: string, alt: string, width: number, height: number } | null} */
   let selectedImage = null;
 
   /** @type string | undefined */
   let selectedImageCaption;
+
+  /** @type {HTMLDivElement}*/
+  let backdrop;
 
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
     /** @type {HTMLButtonElement | null}*/
@@ -27,7 +32,7 @@
 
   const onImageLoad = (/** @type {HTMLElementEventMap['load']} */ event) => {
     selectedImageCaption = selectedImage?.alt;
-  }
+  };
 
   const nextImage = (/** @type {HTMLElementEventMap['click']} */ event) => {
     event?.preventDefault();
@@ -50,11 +55,24 @@
     }
   };
 
-  const onModalClose = (/** @type {HTMLElementEventMap['submit'] | HTMLElementEventMap['click']} */ event) => {
-    event?.preventDefault();
+  const closeImagePreview = () => {
     selectedImage = null;
-    selectedImageCaption = '';
+    selectedImageCaption = "";
     dialog.close();
+  };
+
+  const onBackdropClick = (
+    /** @type {HTMLElementEventMap['click']} */ event
+  ) => {
+    event?.preventDefault();
+    if (event.target === backdrop) {
+      closeImagePreview();
+    }
+  };
+
+  const onModalClose = (/** @type {HTMLElementEventMap['submit']} */ event) => {
+    event?.preventDefault();
+    closeImagePreview();
   };
 
   const handleKeydown = (
@@ -97,12 +115,12 @@
       </ul>
     </form>
   </header>
-  <div on:click={onModalClose}>
+  <div bind:this={backdrop} on:click={onBackdropClick}>
     <img
       on:load={onImageLoad}
       id="modal-image"
-      alt={selectedImage?.alt || ''}
-      src={selectedImage?.src || ''}
+      alt={selectedImage?.alt || ""}
+      src={imageRoot + (selectedImage?.src || "")}
       width={selectedImage?.width + "px"}
       height={selectedImage?.height + "px"}
       loading="lazy"
@@ -110,7 +128,7 @@
   </div>
   <footer>
     <div>
-      {selectedImageCaption || ''}
+      {selectedImageCaption || ""}
     </div>
   </footer>
 </dialog>
@@ -120,7 +138,7 @@
     {#each images as image}
       <button on:click={onImageClick} data-index={images.indexOf(image)}>
         <img
-          src={image.srcPreview}
+          src={imageRoot + "/preview" + (image?.src || "")}
           alt={image.alt}
           loading="lazy"
           width={image?.width + "px"}
@@ -194,7 +212,7 @@
     width: auto;
     height: auto;
     margin: auto auto;
-    transition: width,height 1s;
+    transition: width, height 1s;
   }
 
   .modal header {
