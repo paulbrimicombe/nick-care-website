@@ -10,6 +10,9 @@
   /** @type {{ src: string, srcPreview: string, alt: string, width: number, height: number } | null} */
   let selectedImage = null;
 
+  /** @type string | undefined */
+  let selectedImageAltText;
+
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
     /** @type {HTMLButtonElement | null}*/
     if (event?.target instanceof HTMLButtonElement) {
@@ -21,6 +24,10 @@
       }
     }
   };
+
+  const onImageLoad = (/** @type {HTMLElementEventMap['load']} */ event) => {
+    selectedImageAltText = selectedImage?.alt;
+  }
 
   const nextImage = (/** @type {HTMLElementEventMap['click']} */ event) => {
     event?.preventDefault();
@@ -43,7 +50,7 @@
     }
   };
 
-  const onModalClose = (/** @type {HTMLElementEventMap['submit']} */ event) => {
+  const onModalClose = (/** @type {HTMLElementEventMap['submit'] | HTMLElementEventMap['click']} */ event) => {
     event?.preventDefault();
     selectedImage = null;
     dialog.close();
@@ -89,16 +96,19 @@
       </ul>
     </form>
   </header>
-  <img
-    id="modal-image"
-    alt={selectedImage?.alt}
-    src={selectedImage?.src}
-    width={selectedImage?.width + "px"}
-    height={selectedImage?.height + "px"}
-  />
+  <div on:click={onModalClose}>
+    <img
+      on:load={onImageLoad}
+      id="modal-image"
+      alt={selectedImage?.alt || ''}
+      src={selectedImage?.src || ''}
+      width={selectedImage?.width + "px"}
+      height={selectedImage?.height + "px"}
+    />
+  </div>
   <footer>
     <div>
-      {selectedImage?.alt}
+      {selectedImageAltText || ''}
     </div>
   </footer>
 </dialog>
@@ -154,12 +164,25 @@
 
   .modal {
     margin: auto;
-    max-height: 90vh;
-    max-width: 90vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    height: 100vh;
+    width: 100vw;
     padding: 0;
     border: none;
     box-shadow: 0 0 2em rgba(0, 0, 0, 1);
     position: relative;
+    flex-direction: column;
+    background: #00000044;
+  }
+
+  .modal > div {
+    display: grid;
+    place-content: center;
+    max-height: inherit;
+    max-width: inherit;
+    height: 100%;
+    width: 100%;
   }
 
   .modal img {
@@ -168,6 +191,8 @@
     object-fit: contain;
     width: auto;
     height: auto;
+    margin: auto auto;
+    transition: width,height 1s;
   }
 
   .modal header {
@@ -215,7 +240,6 @@
 
   dialog[open] {
     animation: show 0.6s ease normal;
-    margin-top: 5vh;
     z-index: 100;
     border-radius: 0.1em;
   }
@@ -288,5 +312,9 @@
 
   .modal button:hover {
     color: var(--accent-color);
+  }
+
+  .modal footer {
+    font-size: 0.9em;
   }
 </style>
