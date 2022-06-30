@@ -16,12 +16,10 @@
     <section>
       <h2>About Nick</h2>
       <div class="image-and-text">
-        <img
-          src="/nick.jpg"
-          alt="Nick Care conducting"
-          width="352px"
-          height="429px"
-          loading="lazy"
+        <div
+          class="img"
+          style="background-image: url(/nick.jpg); min-height: 25em;"
+          aria-label="Nick Care conducting"
         />
         <div class="text">
           <p>
@@ -43,12 +41,10 @@
     <section>
       <h2>About the concert</h2>
       <div class="image-and-text">
-        <img
-          src="/btl-recording.jpg"
-          width="352px"
-          height="238px"
-          alt="Nick Care conducting AMC Dance Band with Selena Jones (Beyond the Limit recording session, 1999)"
-          loading="lazy"
+        <div
+          class="img"
+          style="background-image: url(/btl-recording.jpg)"
+          aria-label="Nick Care conducting AMC Dance Band with Selena Jones (Beyond the Limit recording session, 1999)"
         />
         <div class="text">
           <div>
@@ -78,12 +74,10 @@
         </div>
       </div>
       <div class="image-and-text">
-        <img
-          src="/tjb-rfh.jpg"
-          width="352px"
-          height="237px"
-          alt="Turnfurlong Jazz Band at the Royal Festival Hall (c. 2003)"
-          loading="lazy"
+        <div
+          class="img"
+          style="background-image: url(/tjb-rfh.jpg)"
+          aria-label="Turnfurlong Jazz Band at the Royal Festival Hall (c. 2003)"
         />
         <div class="text">
           <div>
@@ -213,12 +207,15 @@
     justify-content: center;
   }
 
-  .image-and-text > img {
+  .image-and-text > .img {
     flex: 1;
     min-height: 20em;
-    min-width: 20em;
+    min-width: 15em;
     width: 100%;
-    object-fit: cover;
+    align-self: stretch;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
   }
 
   .image-and-text > .text {
