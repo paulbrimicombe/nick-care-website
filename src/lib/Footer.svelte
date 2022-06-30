@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     font-size: 0.8em;
     padding: 0.6em;
     gap: 1em;
