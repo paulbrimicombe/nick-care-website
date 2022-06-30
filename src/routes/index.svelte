@@ -182,6 +182,7 @@
   h2 {
     padding-top: 0.5em;
     position: relative;
+    color: var(--heading-color);
   }
 
   h2::after {

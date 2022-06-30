@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     padding: 0;
-    width: calc(100vw - calc(100vw - 100%));
-    height: calc(100vh - calc(100vh - 100%) - var(--header-height));
+    width: 100%;
+    height: calc(100% - var(--header-height));
   }
 </style>

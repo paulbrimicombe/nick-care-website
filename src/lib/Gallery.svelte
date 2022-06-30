@@ -184,13 +184,12 @@
 
   .modal {
     margin: auto;
-    max-height: 100vh;
-    max-width: 100vw;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
     padding: 0;
     border: none;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 1);
     position: relative;
     flex-direction: column;
     background: #00000044;
@@ -199,18 +198,19 @@
   .modal > div {
     display: grid;
     place-content: center;
-    max-height: inherit;
-    max-width: inherit;
-    height: 100%;
-    width: 100%;
+    min-height: inherit;
+    min-width: inherit;
+    height: inherit;
+    width: inherit;
   }
 
   .modal img {
-    max-height: inherit;
-    max-width: inherit;
     object-fit: contain;
-    width: auto;
-    height: auto;
+    width: inherit;
+    height: inherit;
+    width: inherit;
+    min-height: inherit;
+    min-width: inherit;
     margin: auto auto;
     transition: width, height 1s;
   }
@@ -238,8 +238,10 @@
   .modal form {
     height: 3em;
     position: relative;
-    background-color: #ffffffaa;
+    background-color: #ffffffcc;
     width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 
   .modal form ul {
