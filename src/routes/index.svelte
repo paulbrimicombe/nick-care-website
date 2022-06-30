@@ -200,6 +200,10 @@
     width: 100%;
   }
 
+  h3 {
+    color: var(--heading-color);
+  }
+
   .image-and-text {
     display: flex;
     flex-direction: row;
