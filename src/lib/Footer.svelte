@@ -1,4 +1,4 @@
-<div class="container">
+<footer>
   <span>
     <svg viewBox="0 0 512 512" width="20" fill="#00000099">
       <path
@@ -7,8 +7,8 @@
     </svg>
     <a href="mailto:nickcareconcert@gmail.com"> nickcareconcert@gmail.com </a>
   </span>
-  <span>&copy; {new Date().getFullYear()} All rights reserved</span>
-</div>
+  <span>&copy; {new Date().getFullYear()}</span>
+</footer>
 
 <style>
   svg {
@@ -20,14 +20,14 @@
     gap: 0.5em;
   }
 
-  .container {
+  footer {
     flex: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: 0.9em;
-    padding: 0.4em;
+    font-size: 0.8em;
+    padding: 0.6em;
     gap: 1em;
     margin-top: 1em;
     border-top: 5px solid;
