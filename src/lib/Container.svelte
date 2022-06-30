@@ -24,6 +24,5 @@ import Footer from "./Footer.svelte";
     width: 100%;
     padding-left: 1em;
     padding-right: 1em;
-    padding-bottom: 1em;
   }
 </style>
