@@ -209,11 +209,11 @@
   }
 
   .image-and-text > img {
-    width: 25%;
+    flex: 1;
+    min-height: 20em;
     min-width: 20em;
-    flex: 0;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    object-fit: cover;
   }
 
   .image-and-text > .text {
