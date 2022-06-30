@@ -205,7 +205,6 @@
 
   .modal img {
     object-fit: contain;
-    width: inherit;
     height: inherit;
     width: inherit;
     min-height: inherit;
