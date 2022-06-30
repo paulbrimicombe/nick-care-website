@@ -172,10 +172,9 @@
 
   button img {
     pointer-events: none;
-    max-height: 15em;
+    height: 15em;
     object-fit: contain;
     width: auto;
-    height: auto;
   }
 
   button {
