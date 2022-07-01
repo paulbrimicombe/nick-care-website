@@ -58,13 +58,12 @@
   .spinner::before {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 5px;
     border-radius: 2px;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
-    background-color: #11111144;
-    box-shadow: #11111144 0px 0px 2px 2px;
+    background-color: #11111122;
+    box-shadow: #11111122 0px 0px 2px 2px;
   }
 
   .hidden {

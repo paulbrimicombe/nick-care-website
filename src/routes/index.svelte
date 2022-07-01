@@ -117,7 +117,6 @@
     width: calc(100vw - (100vw - 100%));
     height: 90vh;
     position: absolute;
-    z-index: -1;
     margin-top: calc(-1 * var(--header-height));
     background-image: url(/amc-db-doin-time.jpg);
     background-position: center top;
@@ -143,7 +142,6 @@
 
   h1 {
     --padding: 0.5em;
-    color: var(--heading-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -176,7 +174,6 @@
   h2 {
     padding-top: 0.5em;
     position: relative;
-    color: var(--heading-color);
   }
 
   h2::after {
@@ -192,10 +189,6 @@
     height: 1.5em;
     left: 0;
     width: 100%;
-  }
-
-  h3 {
-    color: var(--heading-color);
   }
 
   .image-and-text {
