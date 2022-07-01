@@ -23,7 +23,7 @@
 
   @supports (-webkit-touch-callout: none) and (not (translate: none)) {
     span :not(:last-child) {
-      margin-right: 0.5em;
+      margin-right: 0.3em;
     }
   }
 

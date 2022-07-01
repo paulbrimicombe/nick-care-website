@@ -8,7 +8,7 @@
       <li class:active={$page.url.pathname === "/"}>
         <a sveltekit:prefetch href="/"
           ><img
-            src="/svg-logo.svg"
+            src="/logo-small.svg"
             alt="Logo"
             width="520px"
             height="520px"
