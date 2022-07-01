@@ -6,7 +6,14 @@
   <nav>
     <ul>
       <li class:active={$page.url.pathname === "/"}>
-        <a sveltekit:prefetch href="/">Home</a>
+        <a sveltekit:prefetch href="/"
+          ><img
+            src="/svg-logo.svg"
+            alt="Logo"
+            width="520px"
+            height="520px"
+          />Home</a
+        >
       </li>
       <li class:active={$page.url.pathname === "/gallery/"}>
         <a sveltekit:prefetch href="/gallery">Gallery</a>
@@ -90,6 +97,12 @@
     transition: color 0.2s linear;
     text-align: center;
     line-height: 1em;
+  }
+
+  nav a img {
+    max-height: 2em;
+    max-width: 2em;
+    margin-right: 0.5em;
   }
 
   a:hover {

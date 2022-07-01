@@ -7,8 +7,11 @@
   <div class="hero">
     <div class="container">
       <h1>
-        Nick Care celebration concert
-        <div class="subtitle">Sunday 5th March 2023</div>
+        <img src="/svg-logo.svg" alt="Logo" width="520px" height="520px" />
+        <div>
+          Nick Care celebration concert
+          <div class="subtitle">Sunday 5th March 2023</div>
+        </div>
       </h1>
     </div>
   </div>
@@ -158,8 +161,11 @@
   h1 {
     --padding: 0.5em;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
     text-transform: capitalize;
     text-align: center;
     padding: var(--padding);
@@ -181,6 +187,11 @@
   ul {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+  }
+
+  h1 img {
+    max-width: 4em;
+    max-height: 4em;
   }
 
   section {
