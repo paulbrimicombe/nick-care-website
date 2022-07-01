@@ -7,7 +7,7 @@
   <div class="hero">
     <div class="container">
       <h1>
-        <img src="/svg-logo.svg" alt="Logo" width="520px" height="520px" />
+        <img src="/logo.svg" alt="Logo" width="520px" height="520px" />
         <div>
           Nick Care celebration concert
           <div class="subtitle">Sunday 5th March 2023</div>
@@ -234,11 +234,15 @@
   }
 
   @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-    .image-and-text :not(:last-child) {
+    .image-and-text > :not(:last-child) {
       margin-right: 1em;
     }
 
-    section :not(:last-child) {
+    .image-and-text > .text > :not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    section > :not(:last-child) {
       margin-bottom: 1em;
     }
   }
