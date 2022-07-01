@@ -90,7 +90,7 @@
     padding: 0 1em;
     color: var(--heading-color);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.7em;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
