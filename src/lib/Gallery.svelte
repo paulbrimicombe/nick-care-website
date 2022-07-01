@@ -164,6 +164,17 @@
     gap: 1em;
   }
 
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    .gallery :not(:last-child) {
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+
+    dialog {
+      display: none;
+    }
+  }
+
   .gallery button {
     border: none;
     background: inherit;

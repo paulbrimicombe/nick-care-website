@@ -11,11 +11,10 @@
 
 <style>
   main {
-    flex: 1;
     display: flex;
     flex-direction: column;
     padding: 0;
     width: 100%;
-    height: calc(100% - var(--header-height));
+    min-height: calc(100% - var(--header-height));
   }
 </style>
