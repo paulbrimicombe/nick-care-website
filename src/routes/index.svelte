@@ -27,9 +27,14 @@
             Nick Care was a much-loved trumpet player, educationalist, band
             director, teacher and friend. There will be a concert to celebrate
             his life on <b>Sunday 5th March 2023</b> in Buckinghamshire or Bedfordshire
-            (location TBC). We would like as many people whose lives were touched
-            by Nick to come together and celebrate Nick and all the amazing music
-            he brought to our lives so please save the date now!
+            (location TBC).
+          </p>
+          <p>
+            We would like as many people whose lives were touched by Nick to
+            come together and celebrate Nick and all the amazing music he
+            brought to our lives so please save the date now and <strong
+              >share this site far and wide</strong
+            >!
           </p>
           <p>
             Please see the <a href="/gallery">gallery</a> page for some pictures
@@ -50,19 +55,26 @@
         />
         <div class="text">
           <div>
-            <h3>What groups will be playing?</h3>
-            To give as many people as possible an opportunity to play, the concert
-            will involve:
+            <h3>Who will play at the concert?</h3>
+            If you played in a band under Nick's direction, then you are invited
+            to play. Performers will be grouped into:
+
             <ul>
               <li>
-                Big Band(s) directed by <a
+                Big Bands directed by <a
                   href="https://www.julesbuckley.com/"
                   target="_blank"
                   referrerpolicy="no-referrer">Jules Buckley</a
-                > (Metropole Orkest, BBC Symphony Orchestra…)
+                > (Metropole Orkest, BBC Symphony Orchestra, BBC Proms conductor…)
               </li>
-              <li>Brass / Wind Band directed by Kathy Gifford</li>
+              <li>
+                A Brass/Wind Band directed by Kathy Gifford (strings etc.
+                welcome as well?!)
+              </li>
             </ul>
+            Depending on numbers, most people will play in just one or two pieces
+            plus the massed finale. This means that on the day there might be long
+            gaps between your rehearsal & the concert.
           </div>
           <div>
             <h3>Will there be rehearsals?</h3>
@@ -164,6 +176,11 @@
     );
     position: sticky;
     top: calc(var(--header-height) + var(--padding));
+  }
+
+  ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   section {
