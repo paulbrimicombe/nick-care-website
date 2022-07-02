@@ -16,8 +16,9 @@
     <section>
       <h2>About Nick</h2>
       <div class="image-and-text">
-        <div
+        <span
           class="img"
+          role="img"
           style="background-image: url(/nick.jpg); min-height: 25em;"
           aria-label="Nick Care conducting"
         />
@@ -41,8 +42,9 @@
     <section>
       <h2>About the concert</h2>
       <div class="image-and-text">
-        <div
+        <span
           class="img"
+          role="img"
           style="background-image: url(/btl-recording.jpg)"
           aria-label="Nick Care conducting AMC Dance Band with Selena Jones (Beyond the Limit recording session, 1999)"
         />
@@ -74,8 +76,9 @@
         </div>
       </div>
       <div class="image-and-text">
-        <div
+        <span
           class="img"
+          role="img"
           style="background-image: url(/tjb-rfh.jpg)"
           aria-label="Turnfurlong Jazz Band at the Royal Festival Hall (c. 2003)"
         />
