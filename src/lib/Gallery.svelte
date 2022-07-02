@@ -19,8 +19,10 @@
   let backdrop;
 
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
-    /** @type {HTMLButtonElement | null}*/
-    if (event?.target instanceof HTMLButtonElement) {
+    if (
+      event?.target instanceof HTMLButtonElement ||
+      event?.target instanceof HTMLImageElement
+    ) {
       const index = event.target.dataset.index;
 
       if (typeof index !== "undefined") {
@@ -139,6 +141,7 @@
       <button on:click={onImageClick} data-index={images.indexOf(image)}>
         <img
           src={imageRoot + "/preview" + (image?.src || "")}
+          data-index={images.indexOf(image)}
           alt={image.alt}
           loading="lazy"
           width={image?.width + "px"}
@@ -171,7 +174,6 @@
   }
 
   button img {
-    pointer-events: none;
     height: 15em;
     object-fit: contain;
     width: auto;
