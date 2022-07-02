@@ -1,4 +1,6 @@
-<script>
+<script type="module">
+  import { onMount } from "svelte";
+
   /** @type {{ src: string, alt: string, width: number, height: number }[]} */
   export let images = [];
 
@@ -17,6 +19,12 @@
 
   /** @type {HTMLDivElement}*/
   let backdrop;
+
+  onMount(() => {
+    if (dialog && typeof HTMLDialogElement !== "undefined") {
+      dialog.classList.remove("hidden");
+    }
+  });
 
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
     if (
@@ -90,7 +98,7 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<dialog class="modal" bind:this={dialog}>
+<dialog class="modal hidden" bind:this={dialog}>
   <header>
     <form method="dialog" on:submit={onModalClose}>
       <ul>
@@ -165,6 +173,17 @@
     align-items: center;
     justify-content: center;
     gap: 1em;
+  }
+
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    .gallery :not(:last-child) {
+      margin-right: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .hidden {
+    display: none;
   }
 
   .gallery button {

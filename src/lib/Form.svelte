@@ -36,7 +36,7 @@
 
   iframe {
     width: 100%;
-    height: 100%;
+    flex: 1;
     border: none;
     transition: opacity 1s 0.3s;
   }

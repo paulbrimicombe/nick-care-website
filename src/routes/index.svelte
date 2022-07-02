@@ -150,7 +150,6 @@
     padding: var(--padding);
     margin: 0.5em;
     align-items: center;
-    border-radius: 0.5em;
     background: #ffffffcc;
     border: 10px solid;
     border-image-slice: 1;
@@ -178,6 +177,9 @@
 
   h2::after {
     content: "";
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     border-bottom: 5px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(
@@ -198,6 +200,16 @@
     gap: 1em;
     align-items: center;
     justify-content: center;
+  }
+
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    .image-and-text :not(:last-child) {
+      margin-right: 1em;
+    }
+
+    section :not(:last-child) {
+      margin-bottom: 1em;
+    }
   }
 
   .image-and-text > .img {

@@ -13,11 +13,18 @@
 <style>
   svg {
     display: inline-block;
+    max-height: 1.5em;
   }
 
   span {
     display: flex;
     gap: 0.5em;
+  }
+
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    span :not(:last-child) {
+      margin-right: 0.5em;
+    }
   }
 
   footer {
@@ -30,6 +37,9 @@
     padding: 0.6em;
     gap: 1em;
     margin-top: 1em;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
     border-top: 5px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(
