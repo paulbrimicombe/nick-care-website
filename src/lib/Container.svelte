@@ -1,13 +1,13 @@
-<script type="module">
-import Footer from "./Footer.svelte";
+<script>
+  import Footer from "./Footer.svelte";
 
   /** @type string | null */
   export let variant = null;
 </script>
 
-<div class="container" class:full-width={variant === 'fullWidth'}>
+<div class="container" class:full-width={variant === "fullWidth"}>
   <slot />
-  <Footer/>
+  <Footer />
 </div>
 
 <style>

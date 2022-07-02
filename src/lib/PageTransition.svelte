@@ -1,4 +1,4 @@
-<script type="module">
+<script>
   import { fade } from "svelte/transition";
 
   let state = "";

@@ -1,4 +1,4 @@
-<script type="module">
+<script>
   import PageTransition from "../lib/PageTransition.svelte";
   import Container from "../lib/Container.svelte";
   import Gallery from "../lib/Gallery.svelte";

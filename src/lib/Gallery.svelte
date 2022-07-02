@@ -1,6 +1,4 @@
-<script type="module">
-  import { onMount } from "svelte";
-
+<script>
   /** @type {{ src: string, alt: string, width: number, height: number }[]} */
   export let images = [];
 
@@ -20,17 +18,9 @@
   /** @type {HTMLDivElement}*/
   let backdrop;
 
-  onMount(() => {
-    if (dialog && typeof HTMLDialogElement !== "undefined") {
-      dialog.classList.remove("hidden");
-    }
-  });
-
   const onImageClick = (/** @type {HTMLElementEventMap['click']} */ event) => {
-    if (
-      event?.target instanceof HTMLButtonElement ||
-      event?.target instanceof HTMLImageElement
-    ) {
+    /** @type {HTMLButtonElement | null}*/
+    if (event?.target instanceof HTMLButtonElement) {
       const index = event.target.dataset.index;
 
       if (typeof index !== "undefined") {
@@ -98,7 +88,7 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<dialog class="modal hidden" bind:this={dialog}>
+<dialog class="modal" bind:this={dialog}>
   <header>
     <form method="dialog" on:submit={onModalClose}>
       <ul>
@@ -149,7 +139,6 @@
       <button on:click={onImageClick} data-index={images.indexOf(image)}>
         <img
           src={imageRoot + "/preview" + (image?.src || "")}
-          data-index={images.indexOf(image)}
           alt={image.alt}
           loading="lazy"
           width={image?.width + "px"}
@@ -180,10 +169,10 @@
       margin-right: 1em;
       margin-bottom: 1em;
     }
-  }
 
-  .hidden {
-    display: none;
+    dialog {
+      display: none;
+    }
   }
 
   .gallery button {
@@ -193,6 +182,7 @@
   }
 
   button img {
+    pointer-events: none;
     height: 15em;
     object-fit: contain;
     width: auto;
