@@ -19,7 +19,7 @@
         <a sveltekit:prefetch href="/gallery">Gallery</a>
       </li>
       <li class:active={$page.url.pathname === "/attend/"}>
-        <a sveltekit:prefetch href="/attend">Audience</a>
+        <a sveltekit:prefetch href="/attend">Help & Audience</a>
       </li>
       <li class:active={$page.url.pathname === "/play/"}>
         <a sveltekit:prefetch href="/play">I'd like to play</a>

@@ -6,7 +6,7 @@
 
 <PageTransition>
   <Container>
-    <h1>I'd like to watch!</h1>
+    <h1>I'd like to Help / Audience</h1>
     <p>
       If you would like to <em>perform</em> at the concert please go to
       <a href="/play">this page</a> instead.
