@@ -153,10 +153,10 @@
         <div class="text">
           <p>
             If you have any questions or queries or anything that you'd like to
-            share with us, please email <a
+            share with us not covered by the <a href="/get-involved">Get Involved</a> form, please <a
               href="mailto:nickcareconcert@gmail.com"
             >
-              nickcareconcert@gmail.com
+              email us
             </a>.
           </p>
         </div>

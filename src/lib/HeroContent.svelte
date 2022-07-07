@@ -40,7 +40,6 @@
     align-items: center;
     padding: 1em 0;
     width: 100%;
-    flex: 1;
   }
 
   .hero-title::before {
@@ -83,6 +82,7 @@
   }
 
   .link-bar {
+    padding: 0.5em 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -101,6 +101,7 @@
     text-decoration: none;
     transition: color, background-color 0.3s;
     position: relative;
+    background-color: var(--white);
     background-color: var(--white-transparency);
     color: #333;
   }

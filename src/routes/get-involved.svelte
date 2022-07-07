@@ -8,9 +8,9 @@
 
 <PageTransition>
   <Hero imageURL="/btl-recording-filtered.jpg">
-    <HeroContent links={[{ title: "Go to the form!", url: "#form" }]}>
-      <span slot="title">Get Involved!</span>
-      <span slot="subtitle">Let us know by filling <br/> in the form below</span>
+    <HeroContent links={[{ title: "Go to the form", url: "#form" }]}>
+      <span slot="title">Like to Get Involved?</span>
+      <span slot="subtitle">Please fill in the form below!</span>
       <img
         slot="logo"
         src="/logo.svg"

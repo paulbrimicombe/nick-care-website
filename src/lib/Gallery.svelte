@@ -247,6 +247,7 @@
   .modal form {
     height: 3em;
     position: relative;
+    background-color: var(--white);
     background-color: var(--white-transparency);
     width: 100%;
     padding-left: 0.5em;
