@@ -45,8 +45,8 @@
   .hero-title::before {
     content: "";
     height: 100%;
-    width: 3px;
-    border: 3px solid white;
+    border: none;
+    border-left: 0.2em solid white;
     top: 0;
     left: 0;
     position: absolute;
