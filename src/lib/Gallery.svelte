@@ -227,7 +227,7 @@
   .modal header {
     position: absolute;
     color: var(--heading-color);
-    font-size: 0.8em;
+    font-size: var(--step--2);
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -247,7 +247,7 @@
   .modal form {
     height: 3em;
     position: relative;
-    background-color: #ffffffcc;
+    background-color: var(--white-transparency);
     width: 100%;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -302,12 +302,12 @@
     background-color: initial;
     height: 100%;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: var(--step--2);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
     transition: color 0.2s linear;
-    background-clip: 0.1rem;
+    background-clip: 0.1em;
     border: none;
     cursor: pointer;
   }
@@ -321,7 +321,7 @@
   }
 
   .modal button::before {
-    --size: 5px;
+    --size: 0.4em;
     content: "";
     width: 90%;
     height: 0;
@@ -346,6 +346,6 @@
   }
 
   .modal footer {
-    font-size: 0.9em;
+    font-size: var(--step--1);
   }
 </style>

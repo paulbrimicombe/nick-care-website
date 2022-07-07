@@ -6,7 +6,7 @@
 
 <PageTransition>
   <Container>
-    <h1>I'd like to play!</h1>
+    <h1 class="heading">I'd like to play!</h1>
     <p>
       If you would like to attend but <em>not</em> play please go to
       <a href="/attend">this page</a> instead.

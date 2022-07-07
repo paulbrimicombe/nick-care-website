@@ -1,23 +1,40 @@
 <script>
   import PageTransition from "../lib/PageTransition.svelte";
   import Container from "../lib/Container.svelte";
+  import Hero from "../lib/Hero.svelte";
+  import HeroContent from "$lib/HeroContent.svelte";
 </script>
 
 <PageTransition>
-  <div class="hero">
-    <div class="container">
-      <h1>
-        <img src="/logo.svg" alt="Logo" width="520px" height="520px" />
-        <div>
-          Nick Care celebration concert
-          <div class="subtitle">Sunday 5th March 2023</div>
-        </div>
-      </h1>
-    </div>
-  </div>
+  <Hero imageURL="/amc-db-doin-time-filtered.jpg">
+    <HeroContent
+      links={[
+        { title: "About", url: "#about" },
+        { title: "Get Involved", url: "/get-involved" },
+        {
+          title: "Donate",
+          url: "https://www.mndassociation.org/get-involved/donations/",
+        },
+        { title: "Contact", url: "#contact" },
+      ]}
+    >
+      <span slot="title">Nick Care</span>
+      <span slot="subtitle"
+        >celebration concert <br /> Sunday 5th March 2023</span
+      >
+      <img
+        slot="logo"
+        src="/logo.svg"
+        alt="Logo"
+        class="hero-logo"
+        width="520px"
+        height="520px"
+      />
+    </HeroContent>
+  </Hero>
   <Container>
     <section>
-      <h2>About Nick</h2>
+      <h2 class="heading">About Nick<span id="about" class="anchor" /></h2>
       <div class="image-and-text">
         <span
           class="img"
@@ -48,7 +65,7 @@
     </section>
 
     <section>
-      <h2>About the concert</h2>
+      <h2 class="heading">About the concert</h2>
       <div class="image-and-text">
         <span
           class="img"
@@ -77,7 +94,7 @@
               </li>
             </ul>
             Performers will be able to listen to the concert when not performing.
-            We hope that a lot of people will want to play, in this case, it's likely
+            We hope that a lot of people will want to play. In this case, it's likely
             that most people will play in just one or two pieces plus the massed
             finale. This means that on the day there may be long gaps between your
             rehearsals & the concert.
@@ -108,18 +125,14 @@
             </p>
             <ul>
               <li>
-                Like to Play?: Go to the <a href="/play">"I'd like to Play"</a> page
-                & complete & submit the form.
+                Like to Play and/or help? Go to the <a href="/get-involved"
+                  >"Get Involved"</a
+                > page & complete & submit the form.
               </li>
               <li>
-                &/or Like to help?: Go to the <a href="/attend"
-                  >"I'd like to Help/Audience"</a
-                > page and complete and submit the form.
-              </li>
-              <li>
-                Audience?: You'll need to get tickets once they're released by
+                Audience? You'll need to get tickets once they're released by
                 the theatre. BUT if you complete & submit the form on the <a
-                  href="/attend">"Help/Audience"</a
+                  href="/get-involved">"Get Involved"</a
                 > page you'll halp us gauge the likely size of the audience!
               </li>
             </ul>
@@ -127,70 +140,36 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <h2 class="heading">Contact<span id="contact" class="anchor" /></h2>
+      <div class="image-and-text">
+        <span
+          class="img"
+          role="img"
+          style="background-image: url(/bernwode-festival-orch-2003.jpg);"
+          aria-label="Nick Care conducting"
+        />
+        <div class="text">
+          <p>
+            If you have any questions or queries or anything that you'd like to
+            share with us, please email <a
+              href="mailto:nickcareconcert@gmail.com"
+            >
+              nickcareconcert@gmail.com
+            </a>.
+          </p>
+        </div>
+      </div>
+    </section>
   </Container>
 </PageTransition>
 
 <style>
-  .hero {
-    margin: 0;
-    position: relative;
-    height: calc(90vh - var(--header-height));
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero::before {
-    content: "";
-    width: calc(100vw - (100vw - 100%));
-    height: 90vh;
-    position: absolute;
-    margin-top: calc(-1 * var(--header-height));
-    background-image: url(/amc-db-doin-time.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(0.5px);
-  }
-
-  .hero > .container {
-    max-width: 1024px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
-
-  .subtitle {
-    font-size: 0.8em;
-  }
-
-  h1 {
-    --padding: 0.5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    text-transform: capitalize;
-    text-align: center;
-    padding: var(--padding);
-    margin: 0.5em;
-    align-items: center;
-    background: #ffffffcc;
-    border: 10px solid;
-    border-image-slice: 1;
-    border-width: 5px;
-    border-image-source: linear-gradient(
-      to bottom right,
-      var(--accent-color),
-      var(--secondary-color-bright)
-    );
-    position: sticky;
-    top: calc(var(--header-height) + var(--padding));
+  .hero-logo {
+    max-width: 11em;
+    max-height: 11em;
+    opacity: 0.85;
   }
 
   ul {
@@ -198,39 +177,18 @@
     margin-bottom: 0.5em;
   }
 
-  h1 img {
-    max-width: 4em;
-    max-height: 4em;
-  }
-
   section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1em;
+    margin-top: 0.5em;
   }
 
-  h2 {
-    padding-top: 0.5em;
+  .anchor {
     position: relative;
-  }
-
-  h2::after {
-    content: "";
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-      to top right,
-      var(--accent-color),
-      var(--secondary-color-bright)
-    );
-    position: absolute;
-    height: 1.5em;
-    left: 0;
-    width: 100%;
+    top: calc(-1 * var(--header-height));
+    visibility: hidden;
   }
 
   .image-and-text {

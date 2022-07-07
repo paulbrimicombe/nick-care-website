@@ -33,7 +33,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 0.8em;
+    font-size: var(--step--1);
     padding: 0.6em;
     gap: 1em;
     margin-top: 1em;

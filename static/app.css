@@ -1,7 +1,8 @@
 :root {
   font-family: Merriweather, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --pure-white: #ffffff;
+  --white: #e1e4e9;
+  --white-transparency: #e1e4e9cc;
   --primary-color: #005770;
   --secondary-color: #705d00;
   --tertiary-color: #00444E;
@@ -13,14 +14,26 @@
   --background-without-opacity: rgba(243, 210, 210, 0.7);
   --column-width: 42rem;
   --column-margin-top: 4rem;
-  --header-height: calc(1.1 * 3.5rem);
-  --step-0: clamp(1.00rem, calc(0.95rem + 0.24vw), 1.13rem);
-  --step-3: clamp(1.73rem, calc(1.54rem + 0.92vw), 2.20rem);
+  --step--2: clamp(0.61rem, calc(0.56rem + 0.22vw), 0.72rem);
+  --step--1: clamp(0.73rem, calc(0.66rem + 0.33vw), 0.90rem);
+  --step-0: clamp(0.88rem, calc(0.78rem + 0.49vw), 1.13rem);
+  --step-1: clamp(1.05rem, calc(0.91rem + 0.70vw), 1.41rem);
+  --step-2: clamp(1.26rem, calc(1.07rem + 0.97vw), 1.76rem);
+  --step-3: clamp(1.51rem, calc(1.24rem + 1.34vw), 2.20rem);
+  --step-4: clamp(1.81rem, calc(1.45rem + 1.82vw), 2.75rem);
+  --step-5: clamp(2.18rem, calc(1.69rem + 2.45vw), 3.43rem);
+  --header-height: calc(var(--step-0) * 3.2);
+}
+
+html,
+body,
+div {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: var(--pure-white);
+  background-color: var(--white);
   color: var(--text-color);
 }
 
@@ -49,5 +62,30 @@ h5 {
 }
 
 h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-2);
+}
+
+h1 {
+  padding-bottom: 0.5em;
+}
+
+.heading {
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+.heading::after {
+  content: "";
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to top right,
+      var(--accent-color),
+      var(--secondary-color-bright));
+  position: absolute;
+  height: 1.8em;
+  left: 0;
+  width: 100%;
 }
