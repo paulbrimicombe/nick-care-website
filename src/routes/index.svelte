@@ -59,8 +59,8 @@
         <div class="text">
           <div>
             <h3>Who will play at the concert?</h3>
-            If you played in a band under Nick's direction, then you are invited
-            to play. Performers will be grouped into:
+            Anyone who played in a band that Nick directed is invited to play in
+            this concert. Performers will be grouped into:
 
             <ul>
               <li>
@@ -68,16 +68,19 @@
                   href="https://www.julesbuckley.com/"
                   target="_blank"
                   referrerpolicy="no-referrer">Jules Buckley</a
-                > (Metropole Orkest, BBC Symphony Orchestra, BBC Proms conductor…)
+                > (Metropole Orkest, BBC Symphony Orchestra, BBC Proms conductor…
+                and AMC Dance Band member)
               </li>
               <li>
-                A Brass/Wind Band directed by Kathy Gifford (strings etc.
-                welcome as well?!)
+                A Brass/Wind Band playing two of Nick’s Band compositions,
+                directed by Kathy Gifford (strings etc. welcome as well?!)
               </li>
             </ul>
-            Depending on numbers, most people will play in just one or two pieces
-            plus the massed finale. This means that on the day there might be long
-            gaps between your rehearsal & the concert.
+            Performers will be able to listen to the concert when not performing.
+            We hope that a lot of people will want to play, in this case, it's likely
+            that most people will play in just one or two pieces plus the massed
+            finale. This means that on the day there may be long gaps between your
+            rehearsals & the concert.
           </div>
           <div>
             <h3>Will there be rehearsals?</h3>
@@ -101,18 +104,24 @@
           <div>
             <h3>How can I get involved?</h3>
             <p>
-              There are <em>plenty</em> of opportunities to get involved. If
-              you'd like to play, please go to the
-              <a href="/play">performing</a>
-              page. If playing isn't your thing but you'd like to help with any of
-              the following, please go to the
-              <a href="/attend">audience</a>
-              page:
+              There are <em>plenty</em> of opportunities to get involved:
             </p>
             <ul>
-              <li>Listen in the audience</li>
-              <li>Help before the concert date</li>
-              <li>Help on the concert day</li>
+              <li>
+                Like to Play?: Go to the <a href="/play">"I'd like to Play"</a> page
+                & complete & submit the form.
+              </li>
+              <li>
+                &/or Like to help?: Go to the <a href="/attend"
+                  >"I'd like to Help/Audience"</a
+                > page and complete and submit the form.
+              </li>
+              <li>
+                Audience?: You'll need to get tickets once they're released by
+                the theatre. BUT if you complete & submit the form on the <a
+                  href="/attend">"Help/Audience"</a
+                > page you'll halp us gauge the likely size of the audience!
+              </li>
             </ul>
           </div>
         </div>
