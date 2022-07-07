@@ -11,10 +11,10 @@
       links={[
         { title: "About", url: "#about" },
         { title: "Get Involved", url: "/get-involved" },
-        {
-          title: "Donate",
-          url: "https://www.mndassociation.org/get-involved/donations/",
-        },
+        // {
+        //   title: "Donate",
+        //   url: "https://www.mndassociation.org/get-involved/donations/",
+        // },
         { title: "Contact", url: "#contact" },
       ]}
     >

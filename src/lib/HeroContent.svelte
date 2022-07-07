@@ -13,7 +13,7 @@
     <h1>
       <slot name="title" />
       <span class="subtitle">
-        <slot name="subtitle"/>
+        <slot name="subtitle" />
       </span>
     </h1>
     <div class="link-bar">
@@ -43,10 +43,22 @@
     flex: 1;
   }
 
+  .hero-title::before {
+    content: "";
+    height: 100%;
+    width: 3px;
+    border: 3px solid white;
+    top: 0;
+    left: 0;
+    position: absolute;
+    box-shadow: -1px -1px 3px #000c, 1px -1px 3px #000c, -1px 1px 3px #000c,
+      1px 1px 3px #000c;  }
+
   .hero-title {
+    position: relative;
     white-space: normal;
-    border-left: 4px solid var(--white);
     padding: 0 0.5em;
+    padding-left: 1.2em;
     margin: 0 0.5em;
     display: flex;
     flex-direction: column;
@@ -80,7 +92,7 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size: var(--step--1);
-    border: 3px solid var(--white);
+    border: 3px solid #fff;
     cursor: pointer;
     overflow: hidden;
     padding: 0.5em 0.8em;
@@ -100,7 +112,7 @@
   h1 {
     text-transform: capitalize;
     font-size: var(--step-4);
-    color: var(--white);
+    color: #fff;
     text-shadow: -1px -1px 3px #000c, 1px -1px 3px #000c, -1px 1px 3px #000c,
       1px 1px 3px #000c;
     padding: 0;

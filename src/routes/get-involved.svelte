@@ -8,7 +8,7 @@
 
 <PageTransition>
   <Hero imageURL="/btl-recording-filtered.jpg">
-    <HeroContent links={[{ title: "Fill in the form!", url: "#play" }]}>
+    <HeroContent links={[{ title: "Go to the form!", url: "#form" }]}>
       <span slot="title">Get Involved!</span>
       <span slot="subtitle">Let us know by filling <br/> in the form below</span>
       <img
@@ -23,10 +23,10 @@
   </Hero>
   <Container>
     <section class="forms">
-      <span id="play" class="anchor" />
+      <span id="form" class="anchor" />
       <Form
-        src="https://docs.google.com/forms/d/1DCglsoj7J7vqeuWE3j06a_7RG3rB5V8PFKJD00dlSM0/viewform?embedded=true"
-        title="Playing attendance form"
+        src="https://docs.google.com/forms/d/1mOBuKHVqvtVMlqeCHvd9tYYk_Pw5FWFMttgXGfiI1vI/viewform?embedded=true"
+        title="Playing / help / attendance form"
       />
     </section>
   </Container>
