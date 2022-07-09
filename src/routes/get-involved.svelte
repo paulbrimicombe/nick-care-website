@@ -1,7 +1,19 @@
+<script context="module">
+  /** @type {import('@sveltejs/kit').Load} */
+  export async function load() {
+    return {
+      stuff: {
+        title: "Nick Care Concert: Get Involved",
+        description: "How to get involved in the Nick Care celebration concert",
+      },
+    };
+  }
+</script>
+
 <script>
-  import PageTransition from "../lib/PageTransition.svelte";
-  import Container from "../lib/Container.svelte";
-  import Form from "../lib/Form.svelte";
+  import PageTransition from "$lib/PageTransition.svelte";
+  import Container from "$lib/Container.svelte";
+  import Form from "$lib/Form.svelte";
 </script>
 
 <PageTransition>

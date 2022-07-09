@@ -1,7 +1,19 @@
+<script context="module">
+  /** @type {import('@sveltejs/kit').Load} */
+  export async function load() {
+    return {
+      stuff: {
+        title: "Nick Care Concert",
+        description: "Nick Care celebration concert, Sunday 5th March 2023",
+      },
+    };
+  }
+</script>
+
 <script>
-  import PageTransition from "../lib/PageTransition.svelte";
-  import Container from "../lib/Container.svelte";
-  import Hero from "../lib/Hero.svelte";
+  import PageTransition from "$lib/PageTransition.svelte";
+  import Container from "$lib/Container.svelte";
+  import Hero from "$lib/Hero.svelte";
   import HeroContent from "$lib/HeroContent.svelte";
 </script>
 

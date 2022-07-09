@@ -1,7 +1,20 @@
+<script context="module">
+  /** @type {import('@sveltejs/kit').Load} */
+  export async function load() {
+    return {
+      stuff: {
+        title: "Nick Care Image Gallery",
+        description:
+          "An image gallery of Nick Care and some of the groups he directed and played with.",
+      },
+    };
+  }
+</script>
+
 <script>
-  import PageTransition from "../lib/PageTransition.svelte";
-  import Container from "../lib/Container.svelte";
-  import Gallery from "../lib/Gallery.svelte";
+  import PageTransition from "$lib/PageTransition.svelte";
+  import Container from "$lib/Container.svelte";
+  import Gallery from "$lib/Gallery.svelte";
 </script>
 
 <PageTransition>

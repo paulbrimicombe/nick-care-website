@@ -1,7 +1,25 @@
 <script>
+  import { page } from "$app/stores";
   import "../reset.css";
-  import Header from "../lib/Header.svelte";
+  import Header from "$lib/Header.svelte";
+  const HOST = "https://www.nickcareconcert.co.uk";
 </script>
+
+<svelte:head>
+  <meta name="description" content={$page.stuff.description} />
+  <title>Nick Care Concert</title>
+
+  <meta property="og:url" content={`${HOST}${$page.url.pathname}`} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={$page.stuff.title} />
+  <meta property="og:description" content={$page.stuff.description} />
+  <meta property="og:image" content={`${HOST}/logo.png`} />
+  <meta property="og:width" content="1024px" />
+  <meta property="og:height" content="1024px" />
+  <meta property="og:og:locale" content="en_GB" />
+
+  <meta name="twitter:card" content="summary" />
+</svelte:head>
 
 <Header />
 
