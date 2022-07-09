@@ -13,7 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content={$page.stuff.title} />
   <meta property="og:description" content={$page.stuff.description} />
-  <meta property="og:image" content={`${HOST}/logo.png`} />
+  <meta property="og:image:secure_url" content={`${HOST}/logo.png`} />
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
   <meta property="og:og:locale" content="en_GB" />
