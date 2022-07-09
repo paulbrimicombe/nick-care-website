@@ -2,18 +2,18 @@
   import { page } from "$app/stores";
   import "../reset.css";
   import Header from "$lib/Header.svelte";
-  const HOST = "https://www.nickcareconcert.co.uk";
+  const HOST = "www.nickcareconcert.co.uk";
 </script>
 
 <svelte:head>
   <meta name="description" content={$page.stuff.description} />
   <title>Nick Care Concert</title>
 
-  <meta property="og:url" content={`${HOST}${$page.url.pathname}`} />
+  <meta property="og:url" content={`https://${HOST}${$page.url.pathname}`} />
   <meta property="og:type" content="website" />
   <meta property="og:title" content={$page.stuff.title} />
   <meta property="og:description" content={$page.stuff.description} />
-  <meta property="og:image:secure_url" content={`${HOST}/logo.png`} />
+  <meta property="og:image" content={`http://${HOST}/logo.png`} />
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
   <meta property="og:og:locale" content="en_GB" />
