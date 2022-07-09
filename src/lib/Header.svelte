@@ -15,15 +15,15 @@
           />Home</a
         >
       </li>
+      <li class:active={$page.url.pathname === "/get-involved/"}>
+        <a sveltekit:prefetch href="/get-involved">Get involved</a>
+      </li>
       <li class:active={$page.url.pathname === "/gallery/"}>
         <a sveltekit:prefetch href="/gallery">Gallery</a>
       </li>
-      <li class:active={$page.url.pathname === "/attend/"}>
-        <a sveltekit:prefetch href="/attend">Help & Audience</a>
-      </li>
-      <li class:active={$page.url.pathname === "/play/"}>
-        <a sveltekit:prefetch href="/play">I'd like to play</a>
-      </li>
+      <!-- <li class:active={$page.url.pathname === "/donate/"}>
+        <a sveltekit:prefetch href="/donate">Donate</a>
+      </li> -->
     </ul>
   </nav>
 </header>
@@ -33,15 +33,15 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background: #ffffffef;
+    background: #e1e4e9ee;
     height: var(--header-height);
     padding-left: calc((100vw - 1024px) / 2);
     padding-right: calc((100vw - 1024px) / 2);
     background: linear-gradient(
       180deg,
-      #ffffffee 0%,
-      #ffffffcc 85%,
-      #ffffff00 100%
+      #e1e4e9ee 0%,
+      #e1e4e9cc 85%,
+      #e1e4e900 100%
     );
   }
 
@@ -66,7 +66,7 @@
   }
 
   li::before {
-    --size: 5px;
+    --size: 0.25em;
     content: "";
     width: 90%;
     height: 0;
@@ -90,7 +90,7 @@
     padding: 0 1em;
     color: var(--heading-color);
     font-weight: 700;
-    font-size: 0.7em;
+    font-size: var(--step--2);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
