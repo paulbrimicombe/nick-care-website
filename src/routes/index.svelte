@@ -77,10 +77,10 @@
               </li>
             </ul>
             Performers will be able to listen to the concert when not performing.
-            We hope that a lot of people will want to play, in this case, it's likely
-            that most people will play in just one or two pieces plus the massed
-            finale. This means that on the day there may be long gaps between your
-            rehearsals & the concert.
+            We hope that a lot of people will want to play. If this is the case it's
+            likely that most people will play in just one or two pieces plus the
+            massed finale. This means that on the day there may be long gaps between
+            your rehearsals & the concert.
           </div>
           <div>
             <h3>Will there be rehearsals?</h3>
@@ -120,7 +120,7 @@
                 Audience?: You'll need to get tickets once they're released by
                 the theatre. BUT if you complete & submit the form on the <a
                   href="/attend">"Help/Audience"</a
-                > page you'll halp us gauge the likely size of the audience!
+                > page you'll help us gauge the likely size of the audience!
               </li>
             </ul>
           </div>
