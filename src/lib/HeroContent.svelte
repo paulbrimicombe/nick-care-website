@@ -107,14 +107,14 @@
   }
 
   .link-bar a:hover {
-    background-color: var(--white);
-    border-color: var(--heading-colour);
+    background-color: #d0d0d0;
+    border-color: var(--heading-color);
   }
 
   h1 {
     text-transform: capitalize;
     font-size: var(--step-4);
-    color: var(--heading-colour);
+    color: var(--heading-color);
     padding: 0;
   }
 
