@@ -58,9 +58,9 @@
           <p>
             Nick Care was a much-loved trumpet player, educationalist, band
             director, teacher and friend. There will be a charity concert to
-            celebrate his life at <b>6pm on Sunday 5th March 2023</b> in Buckinghamshire
-            or Bedfordshire (location TBC) raising money for the Motor Neurone Disease
-            Association (MNDA).
+            celebrate his life at <b>6pm on Sunday 5th March 2023</b> at the Waterside
+            Theatre, Aylesbury or at a Bedfordshire venue (location TBC) in aid of
+            the Motor Neurone Disease Association (MNDA).
           </p>
           <p>
             We would like as many people whose lives were touched by Nick to
