@@ -28,13 +28,9 @@
 </PageTransition>
 
 <style>
-  section {
-    margin-top: 0.5em;
-  }
-
   .forms {
     display: flex;
     flex-direction: column;
-    height: calc(90vh - var(--header-height));
+    height: calc(92vh - var(--header-height));
   }
 </style>
