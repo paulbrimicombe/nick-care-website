@@ -119,7 +119,7 @@
     <img
       on:load={onImageLoad}
       id="modal-image"
-      alt={selectedImage?.alt || ""}
+      alt={selectedImage?.alt || "No image selected"}
       src={imageRoot + (selectedImage?.src || "")}
       width={selectedImage?.width + "px"}
       height={selectedImage?.height + "px"}
