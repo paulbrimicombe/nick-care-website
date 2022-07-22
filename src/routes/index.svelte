@@ -149,7 +149,17 @@
                 Audience? You'll need to get tickets once they're released by
                 the theatre. BUT if you complete & submit the form on the <a
                   href="/get-involved">"Get Involved"</a
-                > page you'll halp us gauge the likely size of the audience!
+                > page you'll help us gauge the likely size of the audience!
+              </li>
+              <li>
+                Please reply <em>as soon as possible,</em> and
+                <b>definitely by 12/12/22</b>. Don't worry if you're unsure
+                about your availability, we'd like to know you're interested as
+                soon as possible. DON'T PUT IT OFF! 😊
+              </li>
+              <li>
+                The form asks for a lot of info, but this means we get more of
+                the info all in one go rather than in bits.
               </li>
             </ul>
           </div>
@@ -248,5 +258,9 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+  }
+
+  ul :not(:last-child) {
+    padding-bottom: 0.5em;
   }
 </style>
