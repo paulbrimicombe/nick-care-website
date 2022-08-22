@@ -25,7 +25,7 @@
         { title: "Get Involved", url: "/get-involved" },
         // {
         //   title: "Donate",
-        //   url: "https://www.mndassociation.org/get-involved/donations/",
+        //   url: "https://www.justgiving.com/team/NickCareConcert",
         // },
         { title: "Contact", url: "#contact" },
       ]}
@@ -72,6 +72,24 @@
           <p>
             Please see the <a href="/gallery">gallery</a> page for some pictures
             of Nick and the various groups he conducted and played with.
+          </p>
+          <h3>MNDA donations</h3>
+          <p>
+            We intend to keep concert ticket prices to the minimum if we can,
+            but we hope that in addition to coming to the concert, if you feel
+            able & have not done so yet, you might wish to donate a little extra
+            to the MNDA in memory of Nick via <a
+              href="https://www.justgiving.com/team/NickCareConcert"
+              target="blank"
+              referrerpolicy="no-referrer"
+              >Nick Care Concert fundraising for Motor Neurone Disease
+              Association on JustGiving</a
+            > or if you can't attend, you might like to donate instead.
+          </p>
+          <p>
+            We've asked the MNDA to earmark the majority of funds raised for
+            research, with some also going to help the Bedfordshire Group of
+            MNDA, who helped Nick so much with equipment and general support.
           </p>
         </div>
       </div>
@@ -184,6 +202,11 @@
             >
             form, please
             <a href="mailto:nickcareconcert@gmail.com"> email us </a>.
+          </p>
+          <p>
+            After submitting the form on this website or sending us an email,
+            you won't hear anything for quite a while(!) as we'll be processing
+            the information sent by everyone to inform our future arrangements.
           </p>
         </div>
       </div>

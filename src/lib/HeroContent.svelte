@@ -63,7 +63,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
     min-width: 15em;
     min-height: 10em;
   }
@@ -77,7 +76,7 @@
     display: none;
     padding: 0 1em;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
   }
 
@@ -86,6 +85,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .link-bar a {
