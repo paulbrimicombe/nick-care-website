@@ -3,8 +3,8 @@
   export async function load() {
     return {
       stuff: {
-        title: "Nick Care Concert",
-        description: "Nick Care celebration concert, Sunday 5th March 2023",
+        title: "Nick Careʼs BIG Band Paean",
+        description: "Nick Careʼs BIG Band Paean, Sunday 5th March 2023",
       },
     };
   }
@@ -30,9 +30,9 @@
         { title: "Contact", url: "#contact" },
       ]}
     >
-      <span slot="title">Nick Care</span>
+      <span slot="title">Nick Careʼs</span>
       <span slot="subtitle"
-        >celebration concert <br /> 6pm Sunday 5th March 2023</span
+        >BIG Band Paean <br /> 6pm Sunday 5th March 2023</span
       >
       <img
         slot="logo"
@@ -59,8 +59,15 @@
             Nick Care was a much-loved trumpet player, educationalist, band
             director, teacher and friend. There will be a charity concert to
             celebrate his life at <b>6pm on Sunday 5th March 2023</b> at the Waterside
-            Theatre, Aylesbury or at a Bedfordshire venue (location TBC) in aid of
-            the Motor Neurone Disease Association (MNDA).
+            Theatre, Exchange Street, Aylesbury, HP20 1UG, in aid of the Motor Neurone
+            Disease Association (MNDA).
+          </p>
+          <p>
+            <b>UPDATE:</b> Tickets are available NOW from the <a
+              href="https://www.atgtickets.com/shows/nick-cares-big-band-paean/aylesbury-waterside-theatre/"
+              target="_blank"
+              referrerpolicy="no-referrer">Waterside Theatre event page</a
+            >
           </p>
           <p>
             We would like as many people whose lives were touched by Nick to
@@ -75,19 +82,25 @@
           </p>
           <h3>MNDA donations</h3>
           <p>
-            We intend to keep concert ticket prices to the minimum if we can,
-            but we hope that in addition to coming to the concert, if you feel
-            able & have not done so yet, you might wish to donate a little extra
-            to the MNDA in memory of Nick via <a
-              href="https://www.justgiving.com/team/NickCareConcert"
+            Concert tickets are priced as low as we dared, to enable as many
+            people to come as possible at £18 Adult &amp; £11.75
+            Students/Children/ Registered unemployed. Rather more than I hoped
+            to charge, but this includes the theatre’s various per ticket
+            charges (but not the online transaction charge £2.25, which is not
+            per ticket but per order).
+          </p>
+          <p>
+            If you feel able &amp; have not done so yet, you might wish to
+            donate something to the MNDA in memory of Nick via <a
+              href="https://justgiving.com/team/NickCareConcert"
               target="blank"
               referrerpolicy="no-referrer"
               >Nick Care Concert fundraising for Motor Neurone Disease
               Association on JustGiving</a
-            > or if you can't attend, you might like to donate instead.
+            > or if you can’t attend, you might like to donate instead.
           </p>
           <p>
-            We've asked the MNDA to earmark the majority of funds raised for
+            We’ve asked the MNDA to earmark the majority of funds raised for
             research, with some also going to help the Bedfordshire Group of
             MNDA, who helped Nick so much with equipment and general support.
           </p>
@@ -120,27 +133,36 @@
                 and AMC Dance Band member)
               </li>
               <li>
-                A Brass/Wind Band playing two of Nick's Band compositions,
+                A Brass/Wind Band playing two of Nickʼs Band compositions,
                 directed by Kathy Gifford (strings etc. welcome as well?!)
               </li>
             </ul>
             Performers will be able to listen to the concert when not performing.
-            We hope that a lot of people will want to play. In this case, it's likely
+            It’s great that there are a lot of people who want to play. Although
+            it will depend on how many people play specific instruments, it’s likely
             that most people will play in just one or two pieces plus the massed
             finale. This means that on the day there may be long gaps between your
-            rehearsals & the concert.
+            rehearsals &amp; the concert.
           </div>
           <div>
             <h3>Will there be rehearsals?</h3>
             <ul>
               <li>
-                Sunday 5th March: Morning & Afternoon for all performers (from
-                11am TBC)
+                Saturday 4th March: Some rehearsals for some performers (at
+                Aylesbury Music Centre, Walton Road, Aylesbury, HP21 7ST).
               </li>
               <li>
-                Saturday 4th March: Possibly some rehearsals for some performers
+                Sunday 5th March: Morning &amp; Afternoon for all performers
+                (from c. 11am TBC at the Theatre).
               </li>
             </ul>
+            <p>
+              Further information with the specific pieces that weʼll ask
+              specific performers to play will be emailed in early 2023. A
+              rehearsal schedule will be emailed to performers in the new year
+              once itʼs been worked out! Performers will have seats reserved in
+              the Upper Circle so they can listen when theyʼre not playing.
+            </p>
           </div>
         </div>
       </div>
@@ -164,20 +186,27 @@
                 > page & complete & submit the form.
               </li>
               <li>
-                Audience? You'll need to get tickets once they're released by
-                the theatre. BUT if you complete & submit the form on the <a
-                  href="/get-involved">"Get Involved"</a
-                > page you'll help us gauge the likely size of the audience!
+                Audience? Buy your tickets! For Tickets bought at theatre box
+                office, we think there is no additional transaction fee, or to
+                buy tickets on line go to the <a
+                  href="https://www.atgtickets.com/shows/nick-cares-big-band-paean/aylesbury-waterside-theatre/"
+                  target="_blank"
+                  referrerpolicy="no-referrer">Waterside Theatre event page</a
+                >
               </li>
               <li>
                 Please reply <em>as soon as possible,</em> and
-                <b>definitely by 12/12/22</b>. Don't worry if you're unsure
-                about your availability, we'd like to know you're interested as
-                soon as possible. DON'T PUT IT OFF! 😊
+                <b>definitely by 12/12/22</b>. Donʼt worry if youʼre unsure
+                about your availability, weʼd like to know youʼre interested as
+                soon as possible. DONʼT PUT IT OFF! 😊
               </li>
               <li>
                 The form asks for a lot of info, but this means we get more of
                 the info all in one go rather than in bits.
+              </li>
+              <li>
+                If you miss the deadline, make contact anyway &amp; we’ll
+                endeavour to include you if possible.
               </li>
             </ul>
           </div>
@@ -196,7 +225,7 @@
         />
         <div class="text">
           <p>
-            If you have any questions or queries or anything that you'd like to
+            If you have any questions or queries or anything that youʼd like to
             share with us not covered by the <a href="/get-involved"
               >Get Involved</a
             >
@@ -205,9 +234,20 @@
           </p>
           <p>
             After submitting the form on this website or sending us an email,
-            you won't hear anything for quite a while(!) as we'll be processing
+            you wonʼt hear anything for quite a while(!) as weʼll be processing
             the information sent by everyone to inform our future arrangements.
           </p>
+          <h3>What on earth is a Paean???</h3>
+          <ul>
+            <li>
+              A joyous song or hymn of praise, tribute, thanksgiving, or
+              triumph;
+            </li>
+            <li>A work that praises or honours its subject;</li>
+            <li>A tribute;</li>
+            <li>A creative work expressing enthusiastic praise.</li>
+          </ul>
+          <em>&quot;a paean of praise for the great poets&quot;</em>
         </div>
       </div>
     </section>

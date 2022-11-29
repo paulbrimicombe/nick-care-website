@@ -7,7 +7,7 @@
 
 <svelte:head>
   <meta name="description" content={$page.stuff.description} />
-  <title>Nick Care Concert</title>
+  <title>Nick Careʼs BIG Band Paean</title>
 
   <meta property="og:url" content={`https://${HOST}${$page.url.pathname}`} />
   <meta property="og:type" content="website" />

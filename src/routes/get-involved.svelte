@@ -3,8 +3,8 @@
   export async function load() {
     return {
       stuff: {
-        title: "Nick Care Concert: Get Involved",
-        description: "How to get involved in the Nick Care celebration concert",
+        title: "Nick Careʼs BIG Band Paean: Get Involved",
+        description: "How to get involved in Nick Careʼs BIG Band Paean",
       },
     };
   }
